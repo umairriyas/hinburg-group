@@ -585,3 +585,79 @@ footer { background: var(--navy); padding: 70px 6% 30px; border-top: 4px solid v
   .contact-form-wrap { padding: 26px 18px; }
   .trust-bar-inner { justify-content: flex-start; }
 }
+
+/* ── Service Cards — Image Top ── */
+.service-card { padding: 0; overflow: hidden; text-align: left; }
+.sc-img { width: 100%; height: 180px; overflow: hidden; }
+.sc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.service-card:hover .sc-img img { transform: scale(1.06); }
+.service-card h3,
+.service-card p,
+.service-card .icon,
+.service-card .btn { padding: 0 24px; }
+.service-card .icon { margin: 20px 24px 12px; }
+.service-card h3  { margin-bottom: 8px; }
+.service-card p   { margin-bottom: 0; }
+.service-card .btn { margin: 18px 24px 28px; display: inline-flex; }
+
+/* ── Industry Cards — Image Top ── */
+.industry-card { padding: 0; overflow: hidden; }
+.ic-img { width: 100%; height: 160px; overflow: hidden; }
+.ic-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.industry-card:hover .ic-img img { transform: scale(1.06); }
+.industry-card .ind-icon,
+.industry-card h3,
+.industry-card p,
+.industry-card .ind-link { padding-left: 22px; padding-right: 22px; }
+.industry-card .ind-icon { margin: 20px 0 14px 22px; }
+.industry-card h3 { margin-bottom: 8px; }
+.industry-card .ind-link { display: inline-block; margin: 12px 0 24px 22px; }
+
+/* ── Image Feature Strip ── */
+.img-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 260px;
+}
+.img-strip-item { position: relative; overflow: hidden; }
+.img-strip-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.img-strip-item:hover img { transform: scale(1.08); }
+.img-strip-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,21,32,0.85) 0%, transparent 60%);
+  display: flex; align-items: flex-end; padding: 18px;
+}
+.img-strip-overlay span {
+  color: var(--white);
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+}
+
+/* ── Process Image Banner ── */
+.process-img-banner {
+  position: relative;
+  margin-top: 60px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 320px;
+}
+.process-img-banner img { width: 100%; height: 100%; object-fit: cover; }
+.pib-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,21,32,0.90) 0%, rgba(27,58,92,0.70) 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.pib-content { text-align: center; color: var(--white); padding: 20px; }
+.pib-content h3 { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; }
+.pib-content p  { color: rgba(255,255,255,0.80); margin-bottom: 22px; }
+
+/* ── Responsive: Image Strip ── */
+@media (max-width: 768px) {
+  .img-strip { grid-template-columns: repeat(2, 1fr); height: auto; }
+  .img-strip-item { height: 160px; }
+}
+@media (max-width: 480px) {
+  .img-strip { grid-template-columns: 1fr 1fr; }
+}

@@ -36,7 +36,7 @@
         <li><a href="contact.html" class="active">Contact</a></li>
         <li class="nav-cta">
           <a href="contact.html" class="btn btn-gold">
-            <i class="fas fa-envelope"></i> Get In Touch
+            <i class="fas fa-phone"></i>6602023409
           </a>
         </li>
       </ul>
@@ -115,6 +115,13 @@
               <p>hinborginfrastructuregroup.com</p>
             </div>
           </div>
+          <div class="ci-card reveal">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <div class="ci-text">
+              <h4>Phone</h4>
+              <p>660-202-3409</p>
+            </div>
+          </div>
 
           <div class="ci-card reveal">
             <div class="ci-icon"><i class="fas fa-clock"></i></div>
@@ -180,12 +187,9 @@
             and respond within one business day.
           </p>
 
-          <!-- ✅ IMPORTANT: Replace with John's REAL email below -->
           <form
-            id="contactForm"
             action="https://formsubmit.co/john@hinborginfrastructuregroup.com"
             method="POST"
-            novalidate
           >
             <!-- FormSubmit.co Configuration -->
             <input
@@ -200,8 +204,11 @@
               name="_autoresponse"
               value="Thank you for contacting Hinborg Infrastructure Group. John has received your inquiry and will personally respond within one business day."
             />
-            <!-- ✅ Remove _next or set to a real live URL after deployment -->
-            <!-- <input type="hidden" name="_next" value="https://yourdomain.com/contact.html?sent=true"/> -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://hinborginfrastructuregroup.com/thankyou.html"
+            />
             <input
               type="text"
               name="_honey"
@@ -329,6 +336,7 @@
               <textarea
                 id="message"
                 name="message"
+                rows="6"
                 placeholder="Please describe your project, operational challenges or support requirements. The more detail you provide, the better John can prepare a relevant and useful response for your specific situation..."
                 required
               ></textarea>
@@ -367,7 +375,6 @@
 
             <button
               type="submit"
-              id="submitBtn"
               class="btn btn-navy"
               style="
                 width: 100%;
@@ -379,45 +386,6 @@
             >
               <i class="fas fa-paper-plane"></i> Send Inquiry
             </button>
-
-            <!-- Success Message -->
-            <div
-              id="formSuccess"
-              class="form-success"
-              style="display: none; margin-top: 16px"
-            >
-              <i
-                class="fas fa-check-circle"
-                style="color: #2e7d32; font-size: 1.4rem"
-              ></i>
-              <span
-                >Inquiry sent successfully! John will personally review and
-                respond within one business day.</span
-              >
-            </div>
-
-            <!-- Error Message -->
-            <div
-              id="formError"
-              style="
-                display: none;
-                background: #fff3f3;
-                border: 1px solid #c62828;
-                border-radius: 8px;
-                padding: 14px 18px;
-                color: #c62828;
-                font-size: 0.9rem;
-                margin-top: 14px;
-                gap: 10px;
-                align-items: center;
-              "
-            >
-              <i class="fas fa-exclamation-circle"></i>
-              <span
-                >Something went wrong. Please email John directly at
-                <strong>john@hinborginfrastructuregroup.com</strong>.</span
-              >
-            </div>
           </form>
         </div>
       </div>
@@ -687,110 +655,6 @@
       <i class="fas fa-chevron-up"></i>
     </button>
     <script src="assets/js/main.js"></script>
-
-    <!-- FORM VALIDATION + AJAX -->
-    <script>
-      (function () {
-        const form = document.getElementById("contactForm");
-        const btn = document.getElementById("submitBtn");
-        const successBox = document.getElementById("formSuccess");
-        const errorBox = document.getElementById("formError");
-        const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        function showFieldError(el, msg) {
-          el.style.borderColor = "#c62828";
-          const err = document.createElement("span");
-          err.className = "field-error";
-          err.style.cssText =
-            "color:#c62828;font-size:0.80rem;margin-top:4px;display:block;";
-          err.textContent = msg;
-          el.parentNode.appendChild(err);
-        }
-
-        function clearErrors() {
-          form.querySelectorAll(".field-error").forEach((e) => e.remove());
-          form.querySelectorAll("input, textarea, select").forEach((el) => {
-            if (
-              el.type !== "checkbox" &&
-              el.type !== "hidden" &&
-              el.name !== "_honey"
-            ) {
-              el.style.borderColor = "";
-            }
-          });
-          successBox.style.display = "none";
-          errorBox.style.display = "none";
-        }
-
-        form.addEventListener("submit", async function (e) {
-          e.preventDefault();
-          clearErrors();
-
-          const nameEl = document.getElementById("name");
-          const emailEl = document.getElementById("email");
-          const messageEl = document.getElementById("message");
-
-          let valid = true;
-          if (!nameEl.value.trim()) {
-            showFieldError(nameEl, "Please enter your full name.");
-            valid = false;
-          }
-          if (!emailReg.test(emailEl.value.trim())) {
-            showFieldError(emailEl, "Please enter a valid email address.");
-            valid = false;
-          }
-          if (!messageEl.value.trim()) {
-            showFieldError(
-              messageEl,
-              "Please describe your project or inquiry.",
-            );
-            valid = false;
-          }
-          if (!valid) return;
-
-          btn.disabled = true;
-          btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-          try {
-            const res = await fetch(form.action, {
-              method: "POST",
-              body: new FormData(form),
-              headers: { Accept: "application/json" },
-            });
-
-            if (res.ok) {
-              form.reset();
-              btn.disabled = false;
-              btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
-              successBox.style.display = "flex";
-              errorBox.style.display = "none";
-              window.scrollTo({
-                top:
-                  successBox.getBoundingClientRect().top + window.scrollY - 120,
-                behavior: "smooth",
-              });
-              setTimeout(() => (successBox.style.display = "none"), 7000);
-            } else {
-              throw new Error("Server error");
-            }
-          } catch (err) {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
-            errorBox.style.display = "flex";
-            successBox.style.display = "none";
-          }
-        });
-
-        form.querySelectorAll("input, textarea, select").forEach((el) => {
-          el.addEventListener("input", function () {
-            if (this.type !== "checkbox" && this.type !== "hidden")
-              this.style.borderColor = "";
-            const err = this.parentNode.querySelector(".field-error");
-            if (err) err.remove();
-          });
-        });
-      })();
-    </script>
 
     <!-- FAQ STYLES -->
     <style>

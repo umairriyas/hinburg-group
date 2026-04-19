@@ -24,21 +24,21 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <!-- NAVBAR -->
     <nav class="navbar">
       <a href="index.html" class="nav-logo">
         <div class="logo-icon"><i class="fas fa-hard-hat"></i></div>
         <div class="logo-text">Hinborg Infrastructure <span>Group</span></div>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="industries.html">Industries</a></li>
+        <li><a href="industries.html" class="active">Industries</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li class="nav-cta">
           <a href="contact.html" class="btn btn-gold">
-            <i class="fas fa-envelope"></i> Get In Touch
+            <i class="fas fa-phone"></i>6602023409
           </a>
         </li>
       </ul>
@@ -52,8 +52,15 @@
       </div>
     </nav>
 
-    <!-- ═══════════════ HERO ═══════════════ -->
-    <section class="hero">
+    <!-- ══════════════════════════════════
+       HERO — full screen with overlay
+  ══════════════════════════════════ -->
+    <section
+      class="hero"
+      style="
+        background-image: url(&quot;https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=85&quot;);
+      "
+    >
       <div class="hero-content">
         <div class="hero-badge">
           <i class="fas fa-cogs"></i> Engineering & Infrastructure Support —
@@ -90,7 +97,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════ TRUST BAR ═══════════════ -->
+    <!-- TRUST BAR -->
     <div class="trust-bar">
       <div class="trust-bar-inner">
         <div class="trust-item">
@@ -119,7 +126,9 @@
       </div>
     </div>
 
-    <!-- ═══════════════ SERVICES SNAPSHOT ═══════════════ -->
+    <!-- ══════════════════════════════════
+       SERVICES — cards with images
+  ══════════════════════════════════ -->
     <section class="services-snapshot">
       <div class="text-center">
         <span class="section-tag reveal">What We Do</span>
@@ -133,6 +142,13 @@
       </div>
       <div class="services-grid">
         <div class="service-card reveal">
+          <div class="sc-img">
+            <img
+              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80"
+              alt="Engineering Support"
+              loading="lazy"
+            />
+          </div>
           <div class="icon"><i class="fas fa-drafting-compass"></i></div>
           <h3>Engineering Support</h3>
           <p>
@@ -148,6 +164,13 @@
         </div>
 
         <div class="service-card reveal">
+          <div class="sc-img">
+            <img
+              src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80"
+              alt="Infrastructure Coordination"
+              loading="lazy"
+            />
+          </div>
           <div class="icon"><i class="fas fa-network-wired"></i></div>
           <h3>Infrastructure Coordination</h3>
           <p>
@@ -163,6 +186,13 @@
         </div>
 
         <div class="service-card reveal">
+          <div class="sc-img">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+              alt="Project Documentation"
+              loading="lazy"
+            />
+          </div>
           <div class="icon"><i class="fas fa-file-alt"></i></div>
           <h3>Project Documentation</h3>
           <p>
@@ -178,6 +208,13 @@
         </div>
 
         <div class="service-card reveal">
+          <div class="sc-img">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80"
+              alt="Operations Support"
+              loading="lazy"
+            />
+          </div>
           <div class="icon"><i class="fas fa-tools"></i></div>
           <h3>Operations Support</h3>
           <p>
@@ -193,6 +230,13 @@
         </div>
 
         <div class="service-card reveal">
+          <div class="sc-img">
+            <img
+              src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80"
+              alt="Field and Office Workflow"
+              loading="lazy"
+            />
+          </div>
           <div class="icon"><i class="fas fa-sitemap"></i></div>
           <h3>Field & Office Workflow</h3>
           <p>
@@ -208,6 +252,13 @@
         </div>
 
         <div class="service-card reveal">
+          <div class="sc-img">
+            <img
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+              alt="Business Systems Reliability"
+              loading="lazy"
+            />
+          </div>
           <div class="icon"><i class="fas fa-server"></i></div>
           <h3>Business Systems Reliability</h3>
           <p>
@@ -224,13 +275,15 @@
       </div>
     </section>
 
-    <!-- ═══════════════ ABOUT JOHN ═══════════════ -->
+    <!-- ══════════════════════════════════
+       ABOUT JOHN — real photo stays
+  ══════════════════════════════════ -->
     <section class="why-us">
       <div class="why-grid">
         <div class="why-img reveal-left">
           <img
             src="./assets/images/boss.png"
-            alt="Hinborg Infrastructure Group – Engineering Operations"
+            alt="John Stanley Hinborg – Owner, Hinborg Infrastructure Group"
             loading="lazy"
           />
           <div class="why-badge">
@@ -238,7 +291,6 @@
             <span>Years of Infrastructure Expertise</span>
           </div>
         </div>
-
         <div class="why-content reveal-right">
           <span class="section-tag">About the Firm</span>
           <h2 class="section-title">
@@ -303,8 +355,22 @@
       </div>
     </section>
 
-    <!-- ═══════════════ STATS STRIP ═══════════════ -->
-    <section class="stats-strip">
+    <!-- ══════════════════════════════════
+       STATS STRIP — with bg image
+  ══════════════════════════════════ -->
+    <section
+      class="stats-strip"
+      style="
+        background:
+          linear-gradient(
+            135deg,
+            rgba(10, 21, 32, 0.96) 0%,
+            rgba(27, 58, 92, 0.92) 100%
+          ),
+          url(&quot;https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&quot;)
+            center/cover no-repeat;
+      "
+    >
       <div class="stats-grid">
         <div class="stat-box reveal">
           <i class="fas fa-calendar-alt"></i>
@@ -329,7 +395,9 @@
       </div>
     </section>
 
-    <!-- ═══════════════ INDUSTRIES SNAPSHOT ═══════════════ -->
+    <!-- ══════════════════════════════════
+       INDUSTRIES — cards with images
+  ══════════════════════════════════ -->
     <section class="industries-snapshot">
       <div class="text-center">
         <span class="section-tag reveal">Who We Serve</span>
@@ -342,6 +410,13 @@
       </div>
       <div class="industries-grid">
         <div class="industry-card reveal">
+          <div class="ic-img">
+            <img
+              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&q=80"
+              alt="Engineering Environments"
+              loading="lazy"
+            />
+          </div>
           <div class="ind-icon"><i class="fas fa-drafting-compass"></i></div>
           <h3>Engineering Environments</h3>
           <p>
@@ -354,6 +429,13 @@
         </div>
 
         <div class="industry-card reveal">
+          <div class="ic-img">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80"
+              alt="Construction Operations"
+              loading="lazy"
+            />
+          </div>
           <div class="ind-icon"><i class="fas fa-hard-hat"></i></div>
           <h3>Construction Operations</h3>
           <p>
@@ -366,6 +448,13 @@
         </div>
 
         <div class="industry-card reveal">
+          <div class="ic-img">
+            <img
+              src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&q=80"
+              alt="Facilities and Logistics"
+              loading="lazy"
+            />
+          </div>
           <div class="ind-icon"><i class="fas fa-warehouse"></i></div>
           <h3>Facilities & Logistics</h3>
           <p>
@@ -378,6 +467,13 @@
         </div>
 
         <div class="industry-card reveal">
+          <div class="ic-img">
+            <img
+              src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=500&q=80"
+              alt="Infrastructure Businesses"
+              loading="lazy"
+            />
+          </div>
           <div class="ind-icon"><i class="fas fa-network-wired"></i></div>
           <h3>Infrastructure Businesses</h3>
           <p>
@@ -390,6 +486,13 @@
         </div>
 
         <div class="industry-card reveal">
+          <div class="ic-img">
+            <img
+              src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80"
+              alt="Multi-Location Operations"
+              loading="lazy"
+            />
+          </div>
           <div class="ind-icon"><i class="fas fa-map-marked-alt"></i></div>
           <h3>Multi-Location Operations</h3>
           <p>
@@ -403,7 +506,49 @@
       </div>
     </section>
 
-    <!-- ═══════════════ PROCESS ═══════════════ -->
+    <!-- ══════════════════════════════════
+       IMAGE FEATURE STRIP
+  ══════════════════════════════════ -->
+    <section class="img-strip">
+      <div class="img-strip-item">
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80"
+          alt="Construction site operations"
+          loading="lazy"
+        />
+        <div class="img-strip-overlay">
+          <span>Construction Operations</span>
+        </div>
+      </div>
+      <div class="img-strip-item">
+        <img
+          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80"
+          alt="Engineering support"
+          loading="lazy"
+        />
+        <div class="img-strip-overlay"><span>Engineering Support</span></div>
+      </div>
+      <div class="img-strip-item">
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+          alt="Project documentation"
+          loading="lazy"
+        />
+        <div class="img-strip-overlay"><span>Project Documentation</span></div>
+      </div>
+      <div class="img-strip-item">
+        <img
+          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+          alt="Systems reliability"
+          loading="lazy"
+        />
+        <div class="img-strip-overlay"><span>Systems Reliability</span></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+       PROCESS — with side image
+  ══════════════════════════════════ -->
     <section class="process-section">
       <div class="text-center">
         <span class="section-tag reveal">How We Work</span>
@@ -449,10 +594,40 @@
           </p>
         </div>
       </div>
+
+      <!-- Process bottom image banner -->
+      <div class="process-img-banner reveal">
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1400&q=80"
+          alt="Team operations in progress"
+          loading="lazy"
+        />
+        <div class="pib-overlay">
+          <div class="pib-content">
+            <h3>Ready to get started?</h3>
+            <p>Contact John directly and discuss your project today.</p>
+            <a href="contact.html" class="btn btn-gold"
+              ><i class="fas fa-envelope"></i>6602023409</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ═══════════════ CTA BANNER ═══════════════ -->
-    <section class="cta-banner">
+    <!-- CTA BANNER -->
+    <section
+      class="cta-banner"
+      style="
+        background:
+          linear-gradient(
+            135deg,
+            rgba(10, 21, 32, 0.97) 0%,
+            rgba(27, 58, 92, 0.95) 100%
+          ),
+          url(&quot;https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80&quot;)
+            center/cover no-repeat;
+      "
+    >
       <h2 class="reveal">Ready to Strengthen Your Operations?</h2>
       <p class="reveal">
         Contact Hinborg Infrastructure Group today. We work directly with
@@ -469,7 +644,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <!-- FOOTER -->
     <footer>
       <div class="footer-grid">
         <div class="footer-brand">
