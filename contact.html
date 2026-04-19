@@ -180,6 +180,7 @@
             and respond within one business day.
           </p>
 
+          <!-- ✅ IMPORTANT: Replace with John's REAL email below -->
           <form
             id="contactForm"
             action="https://formsubmit.co/john@hinborginfrastructuregroup.com"
@@ -196,9 +197,11 @@
             <input type="hidden" name="_template" value="table" />
             <input
               type="hidden"
-              name="_next"
-              value="https://hinborginfrastructuregroup.com/contact.html?sent=true"
+              name="_autoresponse"
+              value="Thank you for contacting Hinborg Infrastructure Group. John has received your inquiry and will personally respond within one business day."
             />
+            <!-- ✅ Remove _next or set to a real live URL after deployment -->
+            <!-- <input type="hidden" name="_next" value="https://yourdomain.com/contact.html?sent=true"/> -->
             <input
               type="text"
               name="_honey"
@@ -529,9 +532,12 @@
           </div>
           <div class="faq-a">
             Simply fill in the inquiry form above or send an email directly to
-            john@hinborginfrastructuregroup.com. John will personally review
-            your inquiry and respond within one business day to schedule an
-            initial consultation at no obligation.
+            <a
+              href="mailto:john@hinborginfrastructuregroup.com"
+              style="color: var(--navy-mid); font-weight: 600"
+              >john@hinborginfrastructuregroup.com</a
+            >. John will personally review your inquiry and respond within one
+            business day to schedule an initial consultation at no obligation.
           </div>
         </div>
       </div>
